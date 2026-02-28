@@ -37,6 +37,7 @@ macos-titlebar-style = transparent
   shell-integration-features = no-cursor
 
   unfocused-split-opacity = 1
+  split-divider-color = #04a5e5
 
   # --- Mouse ---
   mouse-hide-while-typing = true
