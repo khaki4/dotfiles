@@ -33,7 +33,7 @@ macos-titlebar-style = transparent
   # --- Cursor ---
   cursor-style = block
   cursor-style-blink = true
-  cursor-color = #657b83
+  cursor-color = #04a5e5
   shell-integration-features = no-cursor
 
   unfocused-split-opacity = 1
