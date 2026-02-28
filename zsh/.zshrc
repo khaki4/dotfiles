@@ -1,9 +1,12 @@
 . ~/z.sh
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 PROMPT='%F{cyan}%1~%f → '
 
 
-alias lg='lazygit --use-config-file="$HOME/Library/Application Support/lazygit/config.yml,$HOME/Library/Application Support/lazygit/catppuccin-mocha.yml"'
+export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/themes/catppuccin-latte-blue.yml"
+alias lg='lazygit'
 alias cl="clear"
 alias ll="eza --icons --grid --group-directories-first"
 alias x="claude --dangerously-skip-permissions"

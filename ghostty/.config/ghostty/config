@@ -8,7 +8,7 @@
   # --- Typography ---
 
   font-family = JetBrainsMono Nerd Font
-  font-size = 14
+  font-size = 15
   font-thicken = true
   adjust-cell-height = 2
 
@@ -20,13 +20,11 @@
   font-codepoint-map = U+D7B0-U+D7FF=D2Coding
 
   # --- Theme and Colors ---
-  # Catppuccin with automatic light/dark switching
-  theme = JetBrains Darcula
+  theme = Catppuccin Latte
 
   # --- Window and Appearance ---
-  background-opacity = 0.9
-  background-blur-radius = 20
-  macos-titlebar-style = transparent
+  background-opacity = 1
+macos-titlebar-style = transparent
   window-padding-x = 10
   window-padding-y = 8
   window-save-state = always
@@ -35,7 +33,7 @@
   # --- Cursor ---
   cursor-style = block
   cursor-style-blink = true
-  cursor-color = #00ff00
+  cursor-color = #657b83
   shell-integration-features = no-cursor
 
   unfocused-split-opacity = 1

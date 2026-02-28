@@ -1,0 +1,7 @@
+gui:
+  showBottomLine: true
+  nerdFontsVersion: '3'
+git:
+  pagers:
+    - pager: delta --light --paging=never --syntax-theme='GitHub' --line-numbers
+    - externalDiffCommand: difft --color=always --display=side-by-side-show-both
