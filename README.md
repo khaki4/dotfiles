@@ -8,6 +8,10 @@
 dotfiles/
 ├── ghostty/           # Ghostty 터미널 설정
 │   └── .config/ghostty/config
+├── lazygit/           # Lazygit 설정 + Catppuccin 테마
+│   └── .config/lazygit/
+│       ├── config.yml
+│       └── themes/catppuccin-latte-blue.yml
 ├── zsh/               # Zsh 셸 설정
 │   └── .zshrc
 ├── git/               # Git 설정
@@ -80,10 +84,85 @@ cd ~/dotfiles
 stow -R ghostty
 ```
 
+## 새 컴퓨터에서 Ghostty 터미널 설정하기
+
+### 1. Ghostty 설치
+
+[ghostty.org](https://ghostty.org/)에서 다운로드하거나:
+
+```bash
+# macOS
+brew install --cask ghostty
+```
+
+### 2. 필수 폰트 설치
+
+이 설정은 **JetBrainsMono Nerd Font**(영문)과 **D2Coding**(한글)을 사용합니다.
+
+```bash
+# JetBrainsMono Nerd Font
+brew install --cask font-jetbrains-mono-nerd-font
+
+# D2Coding
+brew install --cask font-d2coding
+```
+
+### 3. dotfiles 적용
+
+```bash
+cd ~/dotfiles
+stow ghostty
+```
+
+적용 후 Ghostty를 재시작하거나 `Cmd+Shift+,`로 설정을 리로드합니다.
+
+### 주요 설정 요약
+
+| 항목 | 값 |
+|------|-----|
+| 테마 | Catppuccin Latte |
+| 영문 폰트 | JetBrainsMono Nerd Font (15pt) |
+| 한글 폰트 | D2Coding |
+| Quick Terminal | `Ctrl+`` (전역) |
+
+## 새 컴퓨터에서 Lazygit 테마 설정하기
+
+### 1. Lazygit 및 의존성 설치
+
+```bash
+# lazygit
+brew install lazygit
+
+# delta (diff pager)
+brew install git-delta
+
+# difftastic (구조적 diff)
+brew install difftastic
+```
+
+### 2. dotfiles 적용
+
+```bash
+cd ~/dotfiles
+stow lazygit
+```
+
+### 주요 설정 요약
+
+| 항목 | 값 |
+|------|-----|
+| 테마 | Catppuccin Latte Blue (`themes/catppuccin-latte-blue.yml`) |
+| Diff pager | [delta](https://github.com/dandavison/delta) (light 모드, 라인 넘버) |
+| External diff | [difftastic](https://github.com/Wilfred/difftastic) (side-by-side) |
+| Nerd Fonts | v3 아이콘 활성화 |
+
+> **참고**: delta와 difftastic은 선택사항이지만, 설치하지 않으면 lazygit에서 diff 관련 기능이 기본 pager로 대체됩니다.
+
 ## 현재 관리 중인 설정
 
 | 패키지 | 설명 | 대상 경로 |
 |--------|------|-----------|
 | `ghostty` | Ghostty 터미널 (테마, 키바인딩, 폰트) | `~/.config/ghostty/config` |
+| `lazygit` | Lazygit (Catppuccin 테마, delta/difftastic) | `~/.config/lazygit/` |
 | `zsh` | Zsh 셸 (alias, 환경변수, 프롬프트) | `~/.zshrc` |
 | `git` | Git 사용자 정보 | `~/.gitconfig` |
